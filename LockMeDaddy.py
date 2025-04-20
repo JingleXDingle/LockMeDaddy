@@ -3,6 +3,7 @@
 import random
 
 
+
 letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 symbols = [ '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '{', '}', '[', ']', ':', ';', '"', "'", '<', '>', '?', '/', '|']
 numbers = '0123456789'
@@ -25,14 +26,15 @@ symbols_choice = input()
 if symbols_choice== 'yes':
     print("How many symbols would you like?")
     num_symbols = int(input())
-if num_symbols <= 0 or num_symbols > 50:
-    print("Please enter a number between 1 and 50 for the number of symbols.")
-    exit()
 elif symbols_choice == 'no':
     num_symbols = 0
 else: 
     print("Invalid input. Please enter 'yes' or 'no'.")
     exit()
+if num_symbols <= 0 or num_symbols > 50:
+    print("Please enter a number between 1 and 50 for the number of symbols.")
+    exit()
+
 
 
 # Checks if the user wants to include numbers in the password.
@@ -43,12 +45,13 @@ if numbers_choice == 'yes':
     num_numbers = int(input())
 elif numbers_choice == 'no':
     num_numbers = 0
-elif num_numbers <= 0 or num_numbers > 10:
-    print("Please enter a number between 1 and 10 for the amount of numbers.")
-    exit()    
 else: 
     print("Invalid input. Please enter 'yes' or 'no'.")
     exit()
+if num_numbers <= 0 or num_numbers > 10:
+    print("Please enter a number between 1 and 10 for the amount of numbers.")
+    exit()   
+
 
 
 # Generates a list of random characters based on the user's input.
@@ -65,3 +68,4 @@ Shuffled_password = ''.join(unshufled_password)
 
 # Prints the final password to the user.
 print(f"Your password is: {Shuffled_password}") 
+
