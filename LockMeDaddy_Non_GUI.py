@@ -3,10 +3,11 @@
 import random
 
 
-
+# List of available characters the program can use to generate the password.
 letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 symbols = [ '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '{', '}', '[', ']', ':', ';', '"', "'", '<', '>', '?', '/', '|']
 numbers = '0123456789'
+
 
 
 # Welcomes and prompts the user for the number of characters they want in their password.
