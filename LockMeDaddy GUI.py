@@ -35,7 +35,7 @@ def on_generate():
         # Display the result
         result_label.config(text="Generated Password: " + ''.join(password))
     except ValueError:
-        messagebox.showerror("Error", "Please enter valid numbers.")
+        messagebox.showerror("Error", "Please enter valid numbers only.")
 
 # Create the GUI window
 root = tk.Tk()
