@@ -14,8 +14,8 @@ numbers = '0123456789'
 print("Welcome to the Password Generator!")
 print("How many letters would you like in your password? ")
 num_chars = int(input())
-if num_chars <= 0:
-    print("Please enter a positive number for the number of letters.")
+if num_chars < 0:
+    print("Please enter either 0 or a positive number for the number of letters.")
     exit()
 elif num_chars > 100:
     print("Please enter a number less than or equal to 100 for the number of letters.")
@@ -32,8 +32,8 @@ elif symbols_choice == 'no':
 else: 
     print("Invalid input. Please enter 'yes' or 'no'.")
     exit()
-if num_symbols <= 0 or num_symbols > 50:
-    print("Please enter a number between 1 and 50 for the number of symbols.")
+if num_symbols < 0 or num_symbols > 50:
+    print("Please enter a number between 0 and 50 for the number of symbols.")
     exit()
 
 
@@ -49,8 +49,8 @@ elif numbers_choice == 'no':
 else: 
     print("Invalid input. Please enter 'yes' or 'no'.")
     exit()
-if num_numbers <= 0 or num_numbers > 10:
-    print("Please enter a number between 1 and 10 for the amount of numbers.")
+if num_numbers < 0 or num_numbers > 10:
+    print("Please enter a number between 0 and 10 for the amount of numbers.")
     exit()   
 
 
@@ -68,5 +68,8 @@ random.shuffle(unshufled_password)
 Shuffled_password = ''.join(unshufled_password)
 
 # Prints the final password to the user.
-print(f"Your password is: {Shuffled_password}") 
+print(f"Your password is: {Shuffled_password}")
+
+if Shuffled_password == '':
+    print("Congratulations, you are retarded and just wasted your time, try selecting at least one character next time.")
 
