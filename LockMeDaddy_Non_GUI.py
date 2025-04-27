@@ -9,17 +9,19 @@ symbols = [ '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+'
 numbers = '0123456789'
 
 
-
-# Welcomes and prompts the user for the number of characters they want in their password.
-print("Welcome to the Password Generator!")
-print("How many letters would you like in your password? ")
-num_chars = int(input())
-if num_chars < 0:
-    print("Please enter either 0 or a positive number for the number of letters.")
-    exit()
-elif num_chars > 100:
-    print("Please enter a number less than or equal to 100 for the number of letters.")
-    exit()
+while True:
+        # Welcomes and prompts the user for the number of characters they want in their password.
+        print("Welcome to the Password Generator!")
+        print("How many letters would you like in your password? ")
+        num_chars = int(input())
+        if num_chars < 0:
+            print("Please enter either 0 or a positive number for the number of letters.")
+            continue
+        elif num_chars > 100:
+            print("Please enter a number less than or equal to 100 for the number of letters.")
+            continue
+        elif num_chars > 0 and num_chars <= 100:
+            break
 
 # Checks if the user wants to include symbols in the password.
 print("Would you like to include symbols? (yes/no)")
