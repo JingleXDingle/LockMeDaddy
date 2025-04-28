@@ -22,21 +22,23 @@ while True:
             continue
         elif num_chars > 0 and num_chars <= 100:
             break
-
-# Checks if the user wants to include symbols in the password.
-print("Would you like to include symbols? (yes/no)")
-symbols_choice = input()
-if symbols_choice== 'yes':
-    print("How many symbols would you like?")
-    num_symbols = int(input())
-elif symbols_choice == 'no':
-    num_symbols = 0
-else: 
-    print("Invalid input. Please enter 'yes' or 'no'.")
-    exit()
-if num_symbols < 0 or num_symbols > 50:
-    print("Please enter a number between 0 and 50 for the number of symbols.")
-    exit()
+while True:
+            # Checks if the user wants to include symbols in the password.
+            print("Would you like to include symbols? (yes/no)")
+            symbols_choice = input()
+            if symbols_choice== 'yes':
+                print("How many symbols would you like?")
+                num_symbols = int(input())
+            elif symbols_choice == 'no':
+                num_symbols = 0
+            else: 
+                print("Invalid input. Please enter 'yes' or 'no'.")
+                break
+            if num_symbols < 0 or num_symbols > 50:
+                print("Please enter a number between 0 and 50 for the number of symbols.")
+                continue
+            elif num_symbols >= 0 and num_symbols <= 50:
+                break
 
 
 
